@@ -45,7 +45,7 @@ wygladzenie=round(rollapply(Kurs.akcji, width=83, FUN=median, align='center', fi
 wygladzenie
 #write.csv(wygladzenie,'wygladzenie')
 
-plot(Kurs.akcji, type='b', main='Szeregu czasowy kursu zamknięcia akcji pewnej spółki', xlab='Numer sesji', ylab='Kurs zamknięcia',
+plot(Kurs.akcji, type='b', main='Szeregu czasowy kursu zamknięcia akcji pewnej spółki z wygładzeniem', xlab='Numer sesji', ylab='Kurs zamknięcia',
      col='darkgray', lwd=1,pch=16, cex=0.5)
 lines(wygladzenie, col='red', lwd=1.5, type='l', pch=16)
 legend('topleft', legend=c('kurs akcji', 'wygładzenie medianą'), col=c('darkgray', 'red'), lty=1, lwd=c(1,1.5))
